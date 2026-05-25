@@ -1,0 +1,120 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>cooked — your chat just ended you</title>
+    <link rel="icon" type="image/svg+xml" href="/static/logo.svg">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-shell">
+        <!-- nav -->
+        <nav class="nav">
+            <a href="/" class="nav-logo">
+                <img src="/static/logo.svg" alt="cooked" class="logo-icon" width="28" height="28">
+                <span class="logo-word">cooked</span>
+            </a>
+            <span class="nav-tagline">your chat, your downfall</span>
+        </nav>
+
+        <!-- hero -->
+        <header class="hero">
+            <p class="hero-overline">⚠️ you are about to get cooked</p>
+            <h1 class="hero-title">drop your chat.<br>get absolutely<br>destroyed.</h1>
+            <p class="hero-sub">we read your messages so your friends don't have to.</p>
+        </header>
+
+        <main>
+            <!-- upload -->
+            <section id="upload-section">
+                <form id="roast-form" enctype="multipart/form-data">
+                    <div class="upload-box" id="upload-box">
+                        <div class="upload-box-inner">
+                            <span class="upload-emoji">🍳</span>
+                            <p class="upload-title" id="upload-title">drop your exported chat here</p>
+                            <p class="upload-caption">whatsapp .txt without media. we don't want your photos.</p>
+                            <span class="upload-browse">or tap to browse</span>
+                        </div>
+                        <input type="file" id="chat-file" name="file" accept=".txt,.csv" required>
+                    </div>
+
+                    <div class="toggle-row">
+                        <label class="toggle-pill">
+                            <input type="radio" name="chat_type" value="direct" checked>
+                            <span>just us two</span>
+                        </label>
+                        <label class="toggle-pill">
+                            <input type="radio" name="chat_type" value="group">
+                            <span>the whole group</span>
+                        </label>
+                    </div>
+
+                    <input type="hidden" name="user_id" id="user-id-hidden" value="">
+
+                    <button type="submit" id="roast-btn" class="roast-button">
+                        <span class="roast-btn-text">cook me</span>
+                        <span class="roast-btn-loading hidden">
+                            <span class="loading-dot"></span>
+                            <span class="loading-dot"></span>
+                            <span class="loading-dot"></span>
+                        </span>
+                    </button>
+                </form>
+                <div id="error-box" class="error-toast hidden"></div>
+            </section>
+
+            <!-- results -->
+            <section id="results-section" class="hidden">
+                <div class="report" id="report-card">
+                    <div class="report-stamp">you are cooked</div>
+
+                    <div class="report-header">
+                        <span class="report-year">2026</span>
+                        <div class="report-header-center">
+                            <h2 class="report-label">COOKED<br>REPORT</h2>
+                            <p class="report-sub">scientifically embarrassing</p>
+                        </div>
+                        <div class="report-score" id="delusion-score">
+                            <span class="score-number">--</span>
+                            <span class="score-symbol">%</span>
+                        </div>
+                    </div>
+
+                    <div class="meter-wrapper">
+                        <div class="meter-track">
+                            <div class="meter-fill" id="meter-fill"></div>
+                        </div>
+                        <div class="meter-ends">
+                            <span>medium rare</span>
+                            <span>absolutely cooked</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid" id="stats-grid"></div>
+
+                    <div class="verdict-block" id="verdict-block"></div>
+
+                    <p class="report-disclaimer">send this to them. they know what they did.</p>
+                </div>
+
+                <div class="button-pair">
+                    <button id="download-btn" class="ghost-btn">save as image</button>
+                    <button id="reset-btn" class="ghost-btn">cook another chat</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>cooked · est 2026 · we don't store your chats · we just roast and forget</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

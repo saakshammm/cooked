@@ -1,0 +1,18 @@
+<!-- static/logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- egg shape -->
+  <ellipse cx="50" cy="52" rx="32" ry="38" fill="#f43f5e" opacity="0.15" stroke="#f43f5e" stroke-width="3"/>
+  <!-- yolk -->
+  <circle cx="50" cy="48" r="14" fill="#f43f5e"/>
+  <!-- yolk highlight -->
+  <circle cx="45" cy="43" r="4" fill="#ff8fa3" opacity="0.6"/>
+  <!-- sweat drop -->
+  <path d="M72 30 Q75 22 78 30 Q75 35 72 30Z" fill="#f43f5e" opacity="0.8"/>
+  <!-- X eyes (dead) -->
+  <line x1="43" y1="44" x2="49" y2="50" stroke="#121214" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="49" y1="44" x2="43" y2="50" stroke="#121214" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="53" y1="44" x2="59" y2="50" stroke="#121214" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="59" y1="44" x2="53" y2="50" stroke="#121214" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- tiny mouth (dead inside) -->
+  <path d="M46 56 Q50 58 54 56" stroke="#121214" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
